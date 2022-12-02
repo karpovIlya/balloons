@@ -1,0 +1,39 @@
+.button
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 27.7rem
+    height: 5.4rem
+    background-color: #fff
+    border-radius: 50px
+    font-family: 'Lato'
+    text-transform: uppercase
+    text-decoration: none
+    font-weight: 600
+    font-size: 2rem
+    letter-spacing: .5rem
+    color: #777777
+    transition: all 0.2s
+    position: relative
+    &::after
+        content: ""
+        position: absolute
+        top: 0
+        after: 0
+        z-index: -1
+        width: 27.7rem
+        height: 5.4rem
+        background-color: #fff
+        border-radius: 5rem
+        transition: 0.2s all
+    &:hover
+        transform: translateY(-.3rem)
+        box-shadow: (0rem .4rem .4rem rgba(0, 0, 0, 0.3))
+        &::after
+            transform: scaleX(1.5) scaleY(2)
+            opacity: 0
+    &:active
+        transform: translateY(-.2rem)
+        box-shadow: (0rem .4rem .4rem rgba(0, 0, 0, 0.1))
+    &_animated
+        animation: downToUp .6s .2s ease-in-out backwards
