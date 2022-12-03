@@ -1,0 +1,24 @@
+.about
+    min-height: 71.2rem
+    padding-top: 8rem
+    &__title
+        @include secondary-title
+        @include gradient
+        text-align: center
+        margin-bottom: 8rem
+    &__content
+        display: flex
+        justify-content: space-around
+    &__info-block
+        width: 53.5rem
+        margin-bottom: 3rem
+        margin-right: 6.7rem
+        &:last-child
+            margin-bottom: 0
+    &__info-title
+        @include third-title()
+        margin-bottom: 1rem
+    &__info-text
+        @include paragraph()
+    &__images
+        width: 48.6rem
