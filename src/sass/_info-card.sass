@@ -1,0 +1,24 @@
+.info-card
+    width: 24rem
+    min-height: 30rem
+    box-shadow: $box-shadow
+    border-radius: .5rem
+    background: $color-white
+    cursor: pointer
+    transition: .4s all
+    opacity: .8
+    padding: 2.5rem
+    &__icon
+        display: block
+        margin: 0 auto
+        margin-bottom: 2.4rem
+    &__title
+        @include third-title
+        text-align: center
+        margin-bottom: 1rem
+    &__text
+        @include paragraph
+        text-align: center
+        font-size: 1.4rem
+    &:hover
+        transform: scale(1.1)
