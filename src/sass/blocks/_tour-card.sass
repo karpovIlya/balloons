@@ -1,0 +1,80 @@
+.tour-card
+    width: 34.1rem
+    height: 52rem
+    position: relative
+    perspective: 150rem
+    border-radius: .5rem
+    &__side
+        box-shadow: $box-shadow
+        background: $color-white
+        border-radius: .5rem
+        overflow: hidden
+        width: 100%
+        height: 100%
+        backface-visibility: hidden
+        transition: .7s ease-in-out
+        position: absolute
+        top: 0
+        left: 0
+        &_back
+            transform: rotateY(180deg)
+            background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%)
+            display: flex
+            flex-direction: column
+            justify-content: center 
+    &:hover &__side_front
+        transform: rotateY(-180deg)
+    &:hover &__side_back
+        transform: rotateY(0)
+    &__img
+        height: 24.5rem
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%)
+        margin-bottom: 4.5rem
+        &_1
+            background: $color-brown-light url(../img/tours/tour_card_photo_1.jpg) center center/cover no-repeat
+        &_2
+            background: $color-brown-light url(../img/tours/tour_card_photo_2.jpg) center center/cover no-repeat
+        &_3
+            background: $color-brown-light url(../img/tours/tour_card_photo_3.jpg) center center/cover no-repeat
+    &__title
+        position: absolute
+        text-transform: uppercase
+        right: 0
+        top: 18.7rem
+        font-family: 'Lato'
+        font-weight: 400
+        font-size: 2.8rem
+        text-align: right
+        letter-spacing: .2rem
+        color: $color-white
+        &-span
+            &_1
+                padding: 1rem 1.5rem .1rem 1.5rem
+                background: linear-gradient(90deg, $color-brown-light 3.65%, $color-brown-dark 100%)
+            &_2
+                position: relative
+                top: 1.5rem
+                background: linear-gradient(90deg, $color-brown-light 3.65%, $color-brown-dark 100%)
+                padding: 1rem 1.5rem
+    &__descr
+        list-style: none
+        li
+            @include paragraph
+            text-decoration: underline
+            text-underline-offset: .4rem
+            text-align: center
+            margin-bottom: 2rem
+    &__price-text
+        @include paragraph
+        color: $color-white
+        text-align: center
+        margin-bottom: 8.7rem
+    &__price
+        @include secondary-title
+        color: $color-white
+        font-size: 6rem
+        text-align: center
+        margin-bottom: 8.7rem
+    &__button
+        margin: 0 auto
+    
