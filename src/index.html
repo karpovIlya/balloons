@@ -9,18 +9,31 @@
 </head>
 <body>
     <div class="container">
+        <!-- Навигационное меню сайта -->
+        <div class="navigation">
+            <input type="checkbox" class="navigation__toogle" id="toogle">
+            <label for="toogle" class="navigation__button">
+                <div class="navigation__hamburger"></div> 
+            </label>
+            <div class="navigation__background"></div>
+    
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">О НАС</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">СКИДКИ</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">ЛУЧШИЕ ТУРЫ</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">КАЛЬКУЛЯТОР ЦЕНЫ</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">СВЯЗАТЬСЯ С НАМИ</a></li>
+                </ul>
+            </nav>
+        </div>
+
         <main>
             <!-- Главная секция сайта -->
             <section class="promo-page">
                 <!-- Шапка сайта -->
                 <header class="header promo-page__header">
                     <img src="icons/logo.svg" alt="Логотип сайта">
-
-                    <div class="header__hamburger">
-                        <span class="header__hamburger-elem"></span>
-                        <span class="header__hamburger-elem"></span>
-                        <span class="header__hamburger-elem"></span>
-                    </div>
                 </header>
 
                 <div class="promo-page__content">
@@ -33,7 +46,7 @@
                 </div>
             </section>
 
-            <!-- Вторая секция, которая содержит информацию у компании -->
+            <!-- Вторая секция, которая содержит информацию о компании -->
             <section class="about">
                 <h2 class="about__title">НЕВЕРОЯТНОЕ ОЩУЩЕНИЕ СВОБОДЫ</h2>
 
@@ -194,7 +207,7 @@
                     </div>
                 </div>
 
-                <a href="#" class="button button_animated tours__button">ЗАБРОНИРОВАТЬ</a>
+                <a href="#" class="button tours__button">ЗАБРОНИРОВАТЬ</a>
             </section>
 
             <!-- Пятая секция с отзывами -->
@@ -248,9 +261,60 @@
                     </div>
                 </div>
 
-                <a href="#" class="button button_animated feedback__button">ЗАБРОНИРОВАТЬ</a>
+                <a href="#" class="button feedback__button">ЗАБРОНИРОВАТЬ</a>
             </section>
+
+            <!-- Шестая секция сайта с формой -->
+            <div class="book">
+                <form action="#" class="book-form">
+                    <h2 class="book-form__title">ЗАБРОНИРОВАТЬ ТУР</h2>
+
+                    <!-- Поле с именем -->
+                    <div class="book-form__group">
+                        <input type="text" placeholder="Имя Фамилия" id="name" class="book-form__input" required>
+                        <label for="name" class="book-form__label">Ваше имя и фамилия</label>
+                    </div>
+
+                    <!-- Поле с почтой -->
+                    <div class="book-form__group">
+                        <input type="email" placeholder="Email" id="email" class="book-form__input" required>
+                        <label for="email" class="book-form__label">Ваш почтовый адрес</label>
+                    </div>
+
+                    <!-- Поля с радокнопкой -->
+                    <div class="book-form__group book-form__group_flex">
+                        <div class="book-form__radio-wrapp book-form__radio-wrapp_mr">
+                            <input type="radio" id="group-tour" name="tours-type" class="book-form__tours-type-radio" required>
+                            <div class="book-form__radio-button"></div>
+                            <label for="group-tour" class="book-form__tours-type-text">Групповой тур</label>
+                        </div>
+
+                        <div class="book-form__radio-wrapp">
+                            <input type="radio" id="personal-tour" name="tours-type" class="book-form__tours-type-radio" required>
+                            <div class="book-form__radio-button"></div>
+                            <label for="personal-tour" class="book-form__tours-type-text">Индивидуальный тур</label>
+                        </div>
+                    </div>
+
+                    <button class="button button_brown">ЗАБРОНИРОВАТЬ</button>
+                </form>
+            </div>
         </main>
+
+        <!-- Футер сайта -->
+        <footer class="footer">
+            <img src="icons/logo.svg" alt="Логотип в футере" class="footer__img">
+
+            <nav class="footer__nav">
+                <ul>
+                    <li class="footer__nav-elem"><a href="#">О НАС</a></li>
+                    <li class="footer__nav-elem"><a href="#">СКИДКИ</a></li>
+                    <li class="footer__nav-elem"><a href="#">ЛУЧШИЕ ТУРЫ</a></li>
+                    <li class="footer__nav-elem"><a href="#">КАЛЬКУЛЯТОР ЦЕНЫ</a></li>
+                    <li class="footer__nav-elem"><a href="#">СВЯЗАТЬСЯ С НАМИ</a></li>
+                </ul>
+            </nav>
+        </footer>
     </div>
 </body>
 </html>

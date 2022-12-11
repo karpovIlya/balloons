@@ -1,0 +1,28 @@
+.footer
+    min-height: 38rem
+    background: #333333
+    padding: 8rem 0
+    &__img
+        width: 12rem
+        height: 15rem
+        display: block
+        margin: 0 auto
+        margin-bottom: 5rem
+    &__nav
+        margin: 0 auto
+        ul
+            display: flex
+            justify-content: center
+        li:not(:last-child)
+            margin-right: 5rem
+        a
+            @include paragraph
+            display: block
+            color: $color-white
+            text-decoration: none
+            transition: .2s all
+            &:hover
+                color: $color-grey
+            &:active
+                transform: scale(1.1)
+                

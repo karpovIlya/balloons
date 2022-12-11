@@ -15,6 +15,7 @@
     color: $color-grey
     transition: all 0.2s
     position: relative
+    border: none
     &::after
         content: ""
         position: absolute
@@ -37,6 +38,11 @@
         box-shadow: (0rem .4rem .4rem rgba(0, 0, 0, 0.1))
     &_animated
         animation: downToUp .6s .2s ease-in-out backwards
+    &_brown
+        background: $color-brown-light
+        color: white
+        &::after
+            background-color: $color-brown-light
 
 .text-button
     display: inline-block

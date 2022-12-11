@@ -1,0 +1,64 @@
+.book-form
+    height: 50rem
+    background: linear-gradient(115deg, rgba($color-white,0.9) 59%, rgba(9,9,121,0) 59%, rgba(0,212,255,0) 100%), url(../img/book_form_bg.jpg) center center/cover no-repeat
+    padding: 5rem 0 5rem 5rem
+    box-shadow: $box-shadow
+    border-radius: .5rem
+    &__title
+        @include secondary-title
+        @include gradient
+        margin-bottom: 3rem
+        &:hover
+            text-shadow: 0 .4rem .4rem rgba(0, 0, 0, .15)
+            transform: scale(1)
+    &__group
+        margin-bottom: 3rem
+        &_flex
+            display: flex
+    &__input
+        @include paragraph
+        border: none
+        width: 35%
+        height: 5.5rem
+        padding: 2rem
+        border-radius: .5rem
+        border-bottom: .2rem solid #D76363
+        margin-bottom: 1rem
+        transition: .3s all
+        &:focus-visible
+            outline: none
+        &:valid
+            border-bottom: .2rem solid #66D763
+        &:not(:placeholder-shown) + label
+            transform: translateY(0)
+            opacity: 1
+    &__label
+        @include paragraph
+        cursor: pointer
+        transition: .3s ease
+        display: block
+        margin-left: 1.6rem
+        transform: translateY(-3rem)
+        opacity: 0
+    &__radio-wrapp
+        display: flex
+        align-items: center
+        &_mr
+            margin-right: 3.2rem
+    &__radio-button
+        width: 1.5rem
+        height: 1.5rem
+        outline: .5rem solid $color-brown-light
+        outline-offset: .3rem
+        border-radius: 100%
+        margin-right: 2rem
+        transition: .2s all
+    &__tours-type-radio
+        display: none
+        &:checked + div
+            background: $color-brown-light
+    &__tours-type-text
+        @include paragraph
+        cursor: pointer
+
+            

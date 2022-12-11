@@ -1,0 +1,102 @@
+.navigation
+    position: relative
+    &__toogle
+        display: none
+    &__button
+        transition: .7s all
+        box-shadow: $box-shadow
+        width: 7rem
+        height: 7rem
+        background: $color-white
+        border-radius: 100%
+        position: absolute
+        top: 5rem
+        right: 5rem
+        z-index: 200
+        cursor: pointer
+    &__background
+        transition: .6s ease
+        width: 5rem
+        height: 5rem
+        background: radial-gradient($color-brown-light, $color-brown-dark)
+        border-radius: 100%
+        position: absolute
+        top: 6rem
+        right: 6rem
+        z-index: 100
+        transform: scale(1)
+    &__nav
+        transition: .6s all cubic-bezier(0.68, -0.6, 0.32, 1.6)
+        height: 100vh
+        width: 0
+        opacity: 0
+        position: fixed
+        top: 0
+        right: 0
+        z-index: 150
+    &__list
+        width: 100%
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    &__item
+        text-align: center
+        margin-bottom: 5rem
+    &__link
+        font-family: 'Lato'
+        font-weight: 400
+        font-size: 40px
+        letter-spacing: 5px
+        color: $color-white
+        text-decoration: none
+        background: linear-gradient(125deg, transparent 0%, transparent 50%, $color-white 50%)
+        background-size: 225%
+        transition: .3s all
+        display: inline-block
+        padding: 1rem
+        &:hover
+            background-position: 100%
+            color: $color-brown-light
+            transform: translateX(1rem)
+    &__hamburger
+        &, &::before, &::after
+            width: 30px
+            height: 2px
+            background: $color-black
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+        &::before
+            content: ""
+            transition: .3s ease
+            top: -8px
+        &::after
+            content: ""
+            transition: .3s ease
+            top: 10px
+    &__toogle:checked
+        body
+            overflow: hidden
+            background: red
+    &__toogle:checked ~ &__background
+        position: fixed
+        transform: scale(150)
+    &__toogle:checked ~ &__nav
+        width: 100%
+        opacity: 1
+    &__toogle:checked + &__button
+        position: fixed
+        top: 10re
+        right: 10rem
+    &__toogle:checked + &__button &__hamburger::before
+        top: 0
+        left: 0
+        transform: rotate(-45deg)
+    &__toogle:checked + &__button &__hamburger::after
+        top: 0
+        left: 0
+        transform: rotate(45deg)
+    &__toogle:checked + &__button &__hamburger
+        background: transparent
