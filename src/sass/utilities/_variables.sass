@@ -26,6 +26,9 @@ $box-shadow: (0rem .4rem .4rem rgba(0, 0, 0, 0.3))
     &:hover
         transform: scale(1.05)
         text-shadow: 0 .4rem .4rem rgba(0, 0, 0, .25)
+    @include adaptive(phone)
+        font-size: 2.5rem
+        letter-spacing: 0
 
 @mixin third-title()
     font-family: 'Lato'
@@ -34,6 +37,8 @@ $box-shadow: (0rem .4rem .4rem rgba(0, 0, 0, 0.3))
     font-size: 2rem
     letter-spacing: .2rem
     color: $color-grey
+    @include adaptive(phone)
+        font-size: 1.5rem
 
 @mixin paragraph()
     font-family: 'Lato'
@@ -42,3 +47,21 @@ $box-shadow: (0rem .4rem .4rem rgba(0, 0, 0, 0.3))
     line-height: 140%
     letter-spacing: .2rem
     color: $color-grey
+
+// Адаптация сайта
+@mixin adaptive($breakpoint)
+    @if $breakpoint == large
+        @media (min-width: 1800px)
+            @content
+    
+    @if $breakpoint == tablet-big
+        @media (max-width: 1210px)
+            @content
+
+    @if $breakpoint == tablet-small
+        @media (max-width: 870px)
+            @content
+    
+    @if $breakpoint == phone
+        @media (max-width: 600px)
+            @content

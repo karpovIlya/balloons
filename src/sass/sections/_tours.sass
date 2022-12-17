@@ -1,15 +1,34 @@
 .tours
     min-height: 94.2rem
     padding: 8rem 0 8rem 0
+    @include adaptive(tablet-small)
+        padding: 5rem 0
+    @include adaptive(phone)
+        padding: 3rem 0
     &__title
         @include secondary-title
         @include gradient
         text-align: center
         margin-bottom: 8rem
+        @include adaptive(tablet-small)
+            margin-bottom: 5rem
+        @include adaptive(phone)
+            margin-bottom: 3rem
     &__card-wrapper
         display: flex
-        justify-content: space-around
+        justify-content: center
         margin-bottom: 8rem
+        .tour-card:not(:last-child)
+            margin-right: 6rem
+            @include adaptive(tablet-small)
+                margin-right: 0
+                &:not(:last-child)
+                    margin-bottom: 3rem
+        @include adaptive(tablet-small)
+            flex-direction: column
+            align-items: center
+        @include adaptive(phone)
+            margin-bottom: 5rem
     &__button
         margin: 0 auto
         box-shadow: $box-shadow

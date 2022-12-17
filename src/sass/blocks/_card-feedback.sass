@@ -1,6 +1,6 @@
 .card-feedback
-    width: 75%
-    height: 28.2rem
+    width: 100rem
+    min-height: 28.2rem
     box-shadow: $box-shadow
     background: rgba($color-white, .85)
     clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%)
@@ -8,6 +8,17 @@
     display: flex
     justify-content: center
     cursor: pointer
+    @include adaptive(tablet-small)
+        clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%)
+        width: 95%
+    @include adaptive(phone)
+        padding: 5rem
+    &__wrapper
+        display: flex
+        justify-content: center
+        @include adaptive(phone)
+            flex-direction: column
+            text-align: center
     &__photo
         width: 15rem
         height: 15rem
@@ -17,6 +28,8 @@
         -webkit-shape-outside: circle(50% at 50% 50%)
         margin-right: 4rem
         align-self: center
+        @include adaptive(phone)
+            margin-bottom: 3rem
     &__photo-text
         font-family: 'Lato'
         font-weight: 400
@@ -30,7 +43,6 @@
         width: 100%
         transition: .4s all
     &__info
-        width: 52%
         align-self: center
     &__title
         @include third-title

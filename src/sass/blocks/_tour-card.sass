@@ -4,6 +4,8 @@
     position: relative
     perspective: 150rem
     border-radius: .5rem
+    @include adaptive(tablet-small)
+        width: 80%
     &__side
         box-shadow: $box-shadow
         background: $color-white

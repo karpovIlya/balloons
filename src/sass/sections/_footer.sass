@@ -13,8 +13,16 @@
         ul
             display: flex
             justify-content: center
+            @include adaptive(phone)
+                flex-direction: column
+                align-items: center
         li:not(:last-child)
             margin-right: 5rem
+            @include adaptive(tablet-small)
+                margin-right: 3rem
+            @include adaptive(phone)
+                margin-right: 0
+                margin-bottom: 3rem
         a
             @include paragraph
             display: block

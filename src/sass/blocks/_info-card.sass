@@ -8,6 +8,10 @@
     transition: .4s all
     opacity: .8
     padding: 2.5rem
+    @include adaptive(tablet-small)
+        width: 60%
+    @include adaptive(phone)
+        width: 100%
     &__icon
         display: block
         margin: 0 auto

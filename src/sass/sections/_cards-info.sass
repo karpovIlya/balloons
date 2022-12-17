@@ -3,7 +3,18 @@
     background: url(../img/cards_info_bg.jpg) center center/cover no-repeat
     clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%)
     padding: 21.6rem 10rem 21.5rem 10rem
+    @include adaptive(tablet-small)
+        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%)
     &__wrapper
         display: flex
-    &__card
+        justify-content: center
+        @include adaptive(tablet-small)
+            flex-direction: column
+            align-items: center
+    &__card:not(:last-child)
         margin-right: 6rem
+        @include adaptive(tablet-small)
+            margin-right: 0
+            &:not(:last-child)
+                margin-bottom: 3rem
+        

@@ -15,6 +15,10 @@
         margin-bottom: 3rem
         &_flex
             display: flex
+            @include adaptive(tablet-small)
+                flex-direction: column
+        @include adaptive(tablet-small)
+            margin-bottom: 1rem
     &__input
         @include paragraph
         border: none
@@ -32,6 +36,10 @@
         &:not(:placeholder-shown) + label
             transform: translateY(0)
             opacity: 1
+        @include adaptive(tablet-small)
+            width: 40%
+        @include adaptive(phone)
+            width: 50%
     &__label
         @include paragraph
         cursor: pointer
@@ -45,6 +53,9 @@
         align-items: center
         &_mr
             margin-right: 3.2rem
+        @include adaptive(tablet-small)
+            &
+                margin-bottom: 2rem
     &__radio-button
         width: 1.5rem
         height: 1.5rem
@@ -60,5 +71,10 @@
     &__tours-type-text
         @include paragraph
         cursor: pointer
+        @include adaptive(phone)
+            font-size: 1.2rem
+    &__button
+        @include adaptive(phone)
+            margin: 0 auto
 
             
