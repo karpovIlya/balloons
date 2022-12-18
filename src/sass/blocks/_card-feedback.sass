@@ -49,6 +49,8 @@
         margin-bottom: 1rem
     &__text
         @include paragraph
+        @include adaptive(phone)
+            font-size: 1.3rem
     &:hover &__photo-img
         filter: blur(.5rem) brightness(80%)
         transform: scale(1.1)
